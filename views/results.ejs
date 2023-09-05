@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+<p style="font-size: 1.2em;">
+    <%=mainInf%>
+</p>
+
+<h3>
+   Було використано для оцінки достовірності інформації: <%=method%> 
+</h3>
+
+<h2>Результат оцінювання: <%=finalResult%>,  <%=qualityResult %></h2>
+<div style="font-size: 1.4em;">
+    <p>Перший експерт із рівнем <%=firstExp%> оцінив достовірність інформації в <%=firstCred%> </p>
+    <p>Другий експерт із рівнем <%=secondExp%> оцінив достовірність інформації в <%=secondCred%> </p>
+    <p>Третій експерт із рівнем <%=thirdExp%> оцінив достовірність інформації в <%=thirdCred%> </p>
+</div>
+<%- include("partials/footer") %>

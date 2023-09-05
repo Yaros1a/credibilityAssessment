@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    background-color: #27374D
+}
+
+nav>* {
+    background-color: #42a4b6;
+}
+
+main {
+    background-color: #9DB2BF;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 66px;
+}
+
+footer {
+    background-color: #DDE6ED;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+main * {
+    padding: 10px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 0 !important;
+}
+
+.container-fluid {
+    padding: 0 30px;
+}
+
+#brand-icon {
+    display: inline-block;
+    font-size: 40px;
+}
+
+
+#brand-icon:hover {
+    animation: rotation 5s infinite;
+
+}
+
+
+#navbarNav {
+
+    justify-content: end;
+
+}
+
+
+.nav-item {
+    margin-right: 20px;
+    font-weight: bolder;
+
+}
+
+
+
+.nav-item:last-of-type {
+    margin-right: 120px;
+}
+
+.nav-link {
+    color: rgb(87, 78, 78) !important;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    animation: linkExpanse 0.5s forwards;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes linkExpanse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+.mainHeader {
+    text-align: center;
+}
+
+.form-label {
+    font-size: 1.3em;
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.btnChoose {
+    font-family: Roboto, sans-serif;
+    width: 300px;
+    font-weight: 0;
+    font-size: 37px;
+    color: #fff;
+    background-color: #45b6ee;
+    padding: 10px 30px;
+    border: solid #42a4b6 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btnChoose:hover {
+
+    transition: 1000ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #ffffff;
+    color: #364247;
+    border: solid 2px rgb(54, 47, 255);
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.fulContent {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #c8cefd;
+}
+
+/* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+/* Style the input fields */
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #42a4b6;
+}
+
+input[type="radio"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 17px;
+    font-family: Raleway;
+    width: fit-content;
+}
+
+#regForm>p {
+    font-size: 20px;
+    border: 2px solid rgb(54, 47, 255);
+    border-radius: 5px;
+}
+
+.numStyle {
+    color: rgb(54, 47, 255);
+    font-weight: bolder;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 20px;
+    font-size: 1.2em;
+
+}
+
+@media (max-width: 992px) {
+    .thirdExp{
+        grid-column: span 2;
+        width: minmax(250px, 330px);
+        align-self: center ;
+    }
+}
+
+.expNum {
+    margin-bottom: 0;
+    border-radius: 5px;
+    border: 2px solid rgb(54, 47, 255);
+    font-size: 1.5em;
+
+}
+
+.grid-container li{
+    list-style-type: none;
+}
+.grid-container > div {
+    background-color: #b8cbd6;
+}
+
+.continue{
+    text-align: center;
+}
+
+.continue button {
+    width: 200px;
+    display: inherit !important;
+}
+.continue a {
+    text-decoration: none;
+}
+
+label {
+    padding: 0;
+}
+
+.tab > p {
+    margin-bottom: 2px;
+}

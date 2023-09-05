@@ -1,0 +1,112 @@
+<%- include("partials/header") %>
+  <h2>Звичайний метод - Оцінка інформації експертами</h2>
+  <button class="collapsible">Переглянути інформацію +</button>
+  <div class="fulContent">
+    <p>
+      <%=mainInf%>
+    </p>
+  </div>
+  <h2>Аргументація</h2>
+
+  <form id="regForm" action="/argumentation" method="post">
+    <p id="expertNumber">Expert<span id="numS">№1</span></p>
+    <div class="">Необхідно аргументувати відповіді на наступні питання:
+      <div class="question">
+
+        <label for="argum1">1. Чи був автор помічений у навмисному поширенні хибної інформації?</label><br>
+        <input type="text" name="argum1">
+      </div>
+      <div class="question">
+        <label for="radio2">2. Чи був автор помічений у поширенні неперевіреної інформації яка в результаті виявилась
+          хибною?</label><br>
+        <input type="text" name="argum2">
+      </div>
+      <div class="question">
+        <label for="radio3">3. Як часто джерело поширює недостовірну інформацію?</label><br>
+        <input type="text" name="argum3">
+      </div>
+      <div class="question">
+        <label for="radio4">4. Чи використовує автор стиль оцінювання контенту?</label><br>
+        <input type="text" name="argum4">
+      </div>
+      <div class="question">
+        <label for="radio5">5. Чи є джерело інформації незалежним?</label><br>
+        <input type="text" name="argum5">
+      </div>
+      <div class="question">
+        <label for="radio6">6. Чи посилається автор на інші джерела?</label><br>
+        <input type="text" name="argum6">
+      </div>
+      <div class="question">
+        <label for="radio7">7. Чи може джерело мати доступ до такої інформації?</label><br>
+        <input type="text" name="argum7">
+      </div>
+      <div class="question">
+        <label for="radioG1">8. Чи суперечить інформація сама собі?</label><br>
+        <input type="text" name="argum8">
+  
+      </div>
+      <div class="question">
+        <label for="radioG2">9. Чи можна пов’язати дану інформацію з вже наявною?</label><br>
+        <input type="text" name="argum9">
+      </div>
+      <div class="question">
+        <label for="radioG3">10. Чи присутні згадки даної інформації в інших джерелах та чи є ці джерела
+          прийнятними?</label><br>
+          <input type="text" name="argum10">
+      </div>
+      <div class="question">
+        <label for="radioG4">11. Чи є інформація сенсаційною?</label><br>
+        <input type="text" name="argum11">
+      </div>
+      <div class="question">
+        <label for="radioG5">12. Чи може використовуватись оголошена інформація для приховування реальних
+          планів?</label><br>
+        <input type="text" name="argum12">
+      </div>
+      <div class="question">
+        <label for="radioG6">13. Чи може бути інформація суб’єктивною думкою?</label><br>
+        <input type="text" name="argum13">
+      </div>
+      <div class="question">
+        <label for="radioG7">14. Чи присутні в інформаційному просторі протилежні заяви та чи є ті джерела
+          прийнятними?</label><br>
+        <input type="text" name="argum14">
+  
+      </div>
+      <div class="question">
+        <label for="radioG8">15. Чи може оголошена інформація бути вигідна джерелу?</label><br>
+        <input type="text" name="argum15">
+      </div>
+      <div class="question">
+        <label for="radioG9">16. Чи додає автор інформації підтверджуючі докази?</label><br>
+        <input type="text" name="argum16">
+      </div>
+      <div class="question">
+        <label for="radioG10">17. Чи можуть докази свідчити про достовірність інформації?</label><br>
+        <input type="text" name="argum17">
+      </div>
+      <div class="question">
+        <label for="radioG11">18. Чи прихована частина інформації?</label><br>
+        <input type="text" name="argum18">
+  
+      </div>
+      <div class="question">
+        <label for="radioG12">19. Чи є перебільшення чи применшення частини інформації</label><br>
+        <input type="text" name="argum19" >
+      </div>
+
+    </div>
+
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="nextBtn" onclick="start()">Submit</button>
+      </div>
+    </div>
+
+  </form>
+
+  <script src="js/argument.js"></script>
+
+  <script src="js/unfold.js"></script>
+  <%- include("partials/footer") %>

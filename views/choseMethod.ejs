@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+    <button class="collapsible">Переглянути інформацію +</button>
+    <div class="fulContent">
+        <p>
+            <%=mainInf%>
+        </p>
+    </div>
+    <h2>Виберіть метод за яким буде проводитись оцінка:</h2>
+    <div class="buttons">
+        <form action="/standart">
+            <button class="btnChoose">Звичайний</button>
+        </form>
+        <form action="/simple">
+            <button class="btnChoose">Спрощений</button>
+        </form>
+        
+    </div>
+    <script src="js/unfold.js"></script>
+    <%- include("partials/footer") %>

@@ -1,0 +1,241 @@
+<%- include("partials/header") %>
+  <h2>Звичайний метод - Оцінка інформації експертами</h2>
+  <button class="collapsible">Переглянути інформацію +</button>
+  <div class="fulContent">
+    <p>
+      <%=mainInf%>
+    </p>
+  </div>
+
+  <button class="collapsible">Переглянути аргументацію +</button>
+  <div class="fulContent">
+    <div class="expert">...</div>
+    <div class="expert">...</div>
+    <div class="expert">...</div>
+  </div>
+  <h2>Оцінювання</h2>
+
+  <form id="regForm" action="/secondAssess" method="post">
+    <p id="expertNumber">Expert<span id="numS">№1</span></p>
+    <div class="">Необхідно повторно відповісти на наступні питання:
+
+      <div class="question">
+        <p>1. Чи був автор помічений у навмисному поширенні хибної інформації? </p>
+        <label for="r1">
+          <input id="r1" type="radio" name="radio1" value="0">Так</label>
+        <label for="r2">
+          <input id="r2" type="radio" name="radio1" value="0.5" checked>Ні</label>
+        <hr>
+      </div>
+
+      <div class="question">
+        <P>2. Чи був автор помічений у поширенні неперевіреної інформації яка в результаті виявилась хибною?</P>
+        <label for="r3">
+          <input id="r3" type="radio" name="radio2" value="0" checked>Так</label>
+        <label for="r4">
+          <input id="r4" type="radio" name="radio2" value="0.4">Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>3. Як часто джерело поширює недостовірну інформацію?</p>
+        <label for="r5">
+          <input id="r5" type="radio" name="radio3" value="0">Завжди</label>
+        <label for="r6">
+          <input id="r6" type="radio" name="radio3" value="0.1">Дуже часто</label>
+        <label for="r7">
+          <input id="r7" type="radio" name="radio3" value="0.2" checked>Часто</label>
+        <label for="r8">
+          <input id="r8" type="radio" name="radio3" value="0.3">Рідко</label>
+        <label for="r9">
+          <input id="r9" type="radio" name="radio3" value="0.4">Дуже рідко</label>
+        <label for="r10">
+          <input id="r10" type="radio" name="radio3" value="0.5">Ніколи</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>4. Чи використовує автор стиль оцінювання контенту?</p>
+        <label for="r11">
+          <input id="r11" type="radio" name="radio4" value="0" checked>Так</label>
+        <label for="r12">
+          <input id="r12" type="radio" name="radio4" value="0.2">Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>5. Чи є джерело інформації незалежним?</p>
+        <label for="r13">
+          <input id="r13" type="radio" name="radio5" value="0.2" checked>Так</label>
+        <label for="r14">
+          <input id="r14" type="radio" name="radio5" value="0.1">Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>6. Чи посилається автор на інші джерела?</p>
+        <label for="r15">
+          <input id="r15" type="radio" name="radio6" value="1">На власні дані</label>
+        <label for="r16">
+          <input id="r16" type="radio" name="radio6" value="0.4" checked>На загальні джерела</label>
+        <label for="r17">
+          <input id="r17" type="radio" name="radio6" value="0.6">Чітке сумнівне джерело</label>
+        <label for="r18">
+          <input id="r18" type="radio" name="radio6" value="0.8">Чітке достовірне джерело</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>7. Чи може джерело мати доступ до такої інформації?</p>
+      <label for="r19">
+        <input id="r19" type="radio" name="radio7" value="0.3" checked>Так</label>
+      <label for="r20">
+        <input id="r20" type="radio" name="radio7" value="0.1">Ні</label>
+        <hr>
+      </div>
+      
+
+      <div class="question">
+      <p>8. Чи суперечить інформація сама собі?</p>
+        <label for="rb1">
+          <input id="rb1" type="radio" name="radioG1" value="0" checked>Так</label>
+        <label for="rb2">
+          <input id="rb2" type="radio" name="radioG1" value="0.2">Ні</label>
+          <hr>
+      </div>
+
+
+      <div class="question">
+        <p>9. Чи можна пов’язати дану інформацію з вже наявною?</p>
+        <label for="rb3">
+          <input id="rb3" type="radio" name="radioG2" value="1">Так</label>
+        <label for="rb4">
+          <input id="rb4" type="radio" name="radioG2" value="0.67" checked>Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>10. Чи присутні згадки даної інформації в інших джерелах та чи є ці джерела
+          прийнятними?</p>
+        <label for="rb5">
+          <input id="rb5" type="radio" name="radioG3" value="0.4">Так, джерела прийнятні</label>
+        <label for="rb6">
+          <input id="rb6" type="radio" name="radioG3" value="0.1" checked>Так, джерела неприйнятні</label>
+        <label for="rb7">
+          <input id="rb7" type="radio" name="radioG3" value="0.2">Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>11. Чи є інформація сенсаційною?</p>
+      <label for="rb8">
+        <input id="rb8" type="radio" name="radioG4" value="0">Так</label>
+      <label for="rb9">
+        <input id="rb9" type="radio" name="radioG4" value="0.1" checked>Ні</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>12. Чи може використовуватись оголошена інформація для приховування реальних
+          планів?</p>
+        <label for="rb10">
+          <input id="rb110" type="radio" name="radioG5" value="0">Так</label>
+        <label for="rb11">
+          <input id="rb11" type="radio" name="radioG5" value="0.2" checked>Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>13. Чи може бути інформація суб’єктивною думкою?</p>
+      <label for="rb12">
+        <input id="rb12" type="radio" name="radioG6" value="0">Так</label>
+      <label for="rb13">
+        <input id="rb13" type="radio" name="radioG6" value="0.1" checked>Ні</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>14. Чи присутні в інформаційному просторі протилежні заяви та чи є ті джерела
+          прийнятними?</p>
+        <label for="rb14">
+          <input id="rb14" type="radio" name="radioG7" value="0.1">Так, джерелу довіряю</label>
+        <label for="rb115">
+          <input id="rb15" type="radio" name="radioG7" value="0.2" checked>Так, але джерелу не довіряю</label>
+        <label for="rb16">
+          <input id="rb16" type="radio" name="radioG7" value="0.4">Ні</label>
+        <hr>
+      </div>
+
+
+      <div class="question">
+        <p>15. Чи може оголошена інформація бути вигідна джерелу?</p>
+      <label for="rb17">
+        <input id="rb17" type="radio" name="radioG8" value="0">Так</label>
+      <label for="rb18">
+        <input id="rb18" type="radio" name="radioG8" value="0.2" checked>Ні</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>16. Чи додає автор інформації підтверджуючі докази?</p>
+      <label for="rb19">
+        <input id="rb19" type="radio" name="radioG9" value="0.2">Так</label>
+      <label for="rb20">
+        <input id="rb20" type="radio" name="radioG9" value="0" checked>Ні</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>17. Чи можуть докази свідчити про достовірність інформації?</p>
+      <label for="rb21">
+        <input id="rb21" type="radio" name="radioG10" value="0.3" checked>Так</label>
+      <label for="rb22">
+        <input id="rb22" type="radio" name="radioG10" value="0">Нe впливають</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>18. Чи прихована частина інформації?</p>
+      <label for="rb23">
+        <input id="rb23" id="g11" type="radio" name="radioG11" value="0" checked>Так</label>
+      <label for="rb24">
+        <input id="rb24" type="radio" name="radioG11" value="0.2">Ні</label>
+      <hr>
+      </div>
+
+
+      <div class="question">
+        <p>19. Чи є перебільшення чи применшення частини інформації</p>
+      <label for="rb25">
+        <input id="rb25" type="radio" name="radioG12" value="0">Так</label>
+      <label for="rb26">
+        <input id="rb26" type="radio" name="radioG12" value="0.3" checked>Ні</label>
+        <hr>
+      </div>
+
+    </div>
+
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="nextBtn" onclick="start()">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <script src="js/secondAssess.js"></script>
+
+  <script src="js/unfold.js"></script>
+  <%- include("partials/footer") %>

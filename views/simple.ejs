@@ -1,0 +1,58 @@
+<%- include("partials/header") %>
+<h2>Спрощений метод</h2>
+<p>Для початку необхідно сформувати команду експертів, в даному випадку вона скаладається з 3 людей, а також зазначити їхні критерії.</p>
+
+<form id="regForm" action="/simple" method="post">
+
+    <h3>Створенння команди експертів.</h1>
+    <p id="expertNumber">Expert<span class="numStyle">№1</span></p>
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">Name:
+      <p><input placeholder="First name..." name="firstName" value="Petro"></p>
+      <p><input placeholder="Last name..." name="lastName" value="Mostavchyk"></p>
+    </div>
+    
+    <div class="tab">Досвід експерта:
+      <p>Який практичний досвід експерта в даній сфері?
+        <input type="number" placeholder="0" name="expertExp" min="1" max="10" value="5">
+      </p>
+      <p>Яку кількість захищених робіт та публікацій має експерт?
+        <input type="number" placeholder="0" name="expertPub"  min="1" max="10" value="5" >
+      </p>
+      <p>Який науковий ступінь має експерт в даній сфері відповідно до Національної рамки кваліфікацій ?
+        <input type="number" placeholder="0" name="expertLev" value="2"  min="1" max="8">
+      </p>
+    </div>
+    
+    <div class="tab">Незалежні оцінки експерта:
+      <p>Яка частина оцінок експерта виявились правильними?
+        <input type="number" placeholder="0.3" name="expertMar" min="0" max="1.0" step="0.1" value="0.3"></p>
+
+      <p>Чи підвищив експерт свій рівень протягом року?
+        <input id= "radioLev1" type="radio" name="radioLev" value="1">
+        <label for="radioLev1">Так</label>
+        <input id= "radioLev2" type="radio" name="radioLev" value="0.67" checked>
+        <label for="radioLev2">Ні</label></p>
+    </div>
+    
+    
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+    
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+
+    </div>
+    
+    </form>
+
+<script src="js/index.js"></script>
+<script src="js/unfold.js"></script>
+<%- include("partials/footer") %>
